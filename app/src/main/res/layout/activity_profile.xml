@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profileLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ProfileActivity">
+
+    <!--include
+        layout="@layout/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" /-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:minHeight="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white">
+
+        <TextView
+            android:id="@+id/usernamePA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="rahul"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/profilePA"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/followerID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profilePA"
+            android:text="Followers" />
+
+        <TextView
+            android:id="@+id/followerC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_toRightOf="@id/profilePA"
+            android:layout_marginStart="30dp"
+            android:layout_below="@id/followerID"
+            />
+        <TextView
+            android:id="@+id/followingID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/followerID"
+            android:text="Following"/>
+        <TextView
+            android:id="@+id/followingC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginStart="90dp"
+            android:layout_toRightOf="@id/profilePA"
+            android:layout_below="@id/followingID"/>
+
+        <TextView
+            android:id="@+id/userDes"
+            android:layout_toRightOf="@id/profilePA"
+            android:layout_below="@id/followerC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:text="First time signing into PG"/>
+
+        <!--TextView
+            android:id="@+id/screennamePA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="rahul"
+            android:textSize="18sp"
+            android:layout_below="@id/profilePA"
+            android:textStyle="bold" / -->
+
+    </RelativeLayout>
+    <include layout="@layout/fragment_posts"/>
+
+
+</LinearLayout>
